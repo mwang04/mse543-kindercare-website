@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Demo — KinderCare</title>
+<meta name="description" content="Click through the real KinderCare interface. See how a recovery comes together: medications, appointments, recovery tracking, and an emergency card." />
+
+<!-- ============ Google Analytics 4 ============ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/demo.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">KinderCare</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="demo.html" class="active">Demo</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html#newsletter" class="nav-cta">Get updates</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+<div class="page-intro">
+  <div class="container">
+    <span class="eyebrow">Interactive demo</span>
+    <h1>See a recovery <em>come together</em></h1>
+    <p>This is the real interface — tap around just like the app. No download, no sign-up.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="demo-stage">
+      <!-- ASIDE -->
+      <div class="demo-aside">
+        <span class="step-chip">👆 Fully clickable</span>
+        <h2>Tap through a day in Linda's recovery</h2>
+        <p class="lead">Follow Sarah as she cares for her mom after a knee replacement. Start on the welcome screen and explore.</p>
+        <ul class="demo-guide">
+          <li><span class="n">1</span><div>Tap <strong>Get started</strong> to open the daily plan.</div></li>
+          <li><span class="n">2</span><div>Check off a task, then use the bottom bar to visit <strong>Patient</strong>, <strong>Progress</strong>, and <strong>Notes</strong>.</div></li>
+          <li><span class="n">3</span><div>Open the <strong>Emergency card</strong> from the patient profile to see the ER handoff.</div></li>
+        </ul>
+        <div class="demo-counter">
+          Screens explored
+          <strong><span id="demo-screen-count">1</span> of 7</strong>
+          Your exploration helps us measure how clear the experience is.
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="demo-phone-wrap">
+        <div id="demo-phone" role="application" aria-label="KinderCare interactive demo">
+
+          <!-- LANDING -->
+          <div class="screen s-landing" data-screen="landing">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content">
+              <div class="hero">
+                <span class="tag" style="margin-bottom:16px;">for caregivers</span>
+                <div class="display-xl">Care for<br>the people<br>you <em>love.</em></div>
+                <div class="sub">Track meds, exercises, and recovery for a loved one — without the guesswork.</div>
+                <div class="illus"><div class="illus-content">❀</div></div>
+              </div>
+              <div class="cta-row">
+                <button class="big-btn" data-go="today">Get started <span class="arrow">→</span></button>
+                <div class="signin">Already have an account? <span data-go="today">Sign in</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TODAY -->
+          <div class="screen" data-screen="today">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content s-today">
+              <div class="top">
+                <div>
+                  <div class="greet-label">Thursday, Apr 24</div>
+                  <div class="greet">Morning,<br>Sarah.</div>
+                </div>
+                <div class="top-icons">
+                  <button class="icon-btn badge-dot" data-toast="No new alerts right now" aria-label="Notifications">🔔</button>
+                  <button class="avatar sm" data-go="settings" aria-label="Open settings">S</button>
+                </div>
+              </div>
+              <div class="patient-bar" data-go="patient">
+                <div class="avatar sage sm">M</div>
+                <div>
+                  <div class="label">Caring for</div>
+                  <div class="pname">Mom (Linda)</div>
+                </div>
+                <div class="day-chip">Day 12</div>
+              </div>
+              <div class="urgent-card">
+                <div class="label">Overdue · 15 min</div>
+                <div class="task">Oxycodone 5mg</div>
+                <div class="when">Was due at 9:00 AM</div>
+                <button class="act" data-toast="Thanks — marked as taken">Confirm Mom took it →</button>
+              </div>
+              <div class="section-label"><span class="t">Up next</span><span class="count">3 items</span></div>
+              <div class="task-row">
+                <div class="time">10:30</div>
+                <div class="icon-sq amber">💊</div>
+                <div class="body"><div class="t">Tylenol 500mg</div><div class="st">With food</div></div>
+                <div class="check" role="button" aria-label="Mark done"></div>
+              </div>
+              <div class="task-row">
+                <div class="time">11:00</div>
+                <div class="icon-sq">🦵</div>
+                <div class="body"><div class="t">Knee extensions</div><div class="st">3 sets of 10</div></div>
+                <div class="check" role="button" aria-label="Mark done"></div>
+              </div>
+              <div class="task-row done">
+                <div class="time">8:00</div>
+                <div class="icon-sq">🥣</div>
+                <div class="body"><div class="t">Breakfast &amp; hydration</div><div class="st">Logged 20 min ago</div></div>
+                <div class="check" role="button" aria-label="Mark done">✓</div>
+              </div>
+            </div>
+            <div class="bottom-nav">
+              <button class="nav-item active" data-go="today"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Today</button>
+              <button class="nav-item" data-go="patient"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Patient</button>
+              <button class="nav-item" data-go="timeline"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12c4 0 5-8 9-8s5 8 9 8M3 12c4 0 5 8 9 8s5-8 9-8"/></svg>Progress</button>
+              <button class="nav-item" data-go="notes"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5h16v11H7l-3 3z"/></svg>Notes</button>
+            </div>
+          </div>
+
+          <!-- PATIENT -->
+          <div class="screen" data-screen="patient">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content s-patient">
+              <div class="header">
+                <button class="icon-btn" data-go="today" aria-label="Back">←</button>
+                <span class="tag">Patient</span>
+              </div>
+              <div class="hero-card">
+                <div class="row1">
+                  <div class="avatar" style="background:linear-gradient(135deg,var(--coral-2),var(--coral))">M</div>
+                  <div>
+                    <div class="pname">Mom (Linda)</div>
+                    <div class="pmeta">68 · F · Dr. Patel</div>
+                  </div>
+                </div>
+                <div class="surgery">Right knee replacement</div>
+                <div class="progress-label">Day 12 of 42</div>
+                <div class="progress-bar"><span></span></div>
+                <div class="progress-meta"><span>Mar 12 · surgery</span><span>~30 days left</span></div>
+              </div>
+              <div class="stat-row">
+                <div class="stat-card"><div class="n">94%</div><div class="l">Adherence</div></div>
+                <div class="stat-card"><div class="n">5</div><div class="l">Meds</div></div>
+                <div class="stat-card"><div class="n">3</div><div class="l">Exercises</div></div>
+              </div>
+              <div class="section-label"><span class="t">Quick access</span></div>
+              <div class="quick-links">
+                <div class="ql coral" data-go="emergency"><div class="ic">🆘</div><div><div class="t">Emergency card</div><div class="st">For ER handoff</div></div></div>
+                <div class="ql" data-go="timeline"><div class="ic">📋</div><div><div class="t">Full care plan</div><div class="st">All tasks</div></div></div>
+                <div class="ql" data-toast="Invite sent to co-caregiver"><div class="ic">👥</div><div><div class="t">Co-caregivers</div><div class="st">+ invite</div></div></div>
+                <div class="ql" data-toast="2 appointments upcoming"><div class="ic">📅</div><div><div class="t">Appointments</div><div class="st">Dr. Patel · 2</div></div></div>
+              </div>
+            </div>
+            <div class="bottom-nav">
+              <button class="nav-item" data-go="today"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Today</button>
+              <button class="nav-item active" data-go="patient"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Patient</button>
+              <button class="nav-item" data-go="timeline"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12c4 0 5-8 9-8s5 8 9 8M3 12c4 0 5 8 9 8s5-8 9-8"/></svg>Progress</button>
+              <button class="nav-item" data-go="notes"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5h16v11H7l-3 3z"/></svg>Notes</button>
+            </div>
+          </div>
+
+          <!-- TIMELINE -->
+          <div class="screen" data-screen="timeline">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content s-tl">
+              <div class="h">Mom's recovery</div>
+              <div class="sub">Week 2 · on track</div>
+              <div class="tl-hero">
+                <div class="tl-ring-wrap">
+                  <div class="tl-ring">
+                    <svg width="140" height="140">
+                      <circle cx="70" cy="70" r="60" stroke="#E2EADE" stroke-width="10" fill="none"/>
+                      <circle cx="70" cy="70" r="60" stroke="#5E8257" stroke-width="10" fill="none" stroke-dasharray="377" stroke-dashoffset="234" stroke-linecap="round"/>
+                    </svg>
+                    <div class="ring-text"><div class="ring-n">38%</div><div class="ring-l">Complete</div></div>
+                  </div>
+                </div>
+                <div class="tl-legend">
+                  <span class="legend-dot">Done</span>
+                  <span class="legend-dot coral">Missed</span>
+                  <span class="legend-dot gray">Upcoming</span>
+                </div>
+              </div>
+              <div class="section-label"><span class="t">Milestones</span></div>
+              <div class="milestone"><div class="day">7</div><div class="divider"></div><div><div class="t">First walk unassisted ✓</div><div class="st">Logged Apr 19</div></div></div>
+              <div class="milestone"><div class="day">14</div><div class="divider"></div><div><div class="t">Stitches removed</div><div class="st">This Saturday</div></div></div>
+              <div class="milestone"><div class="day faded">21</div><div class="divider"></div><div><div class="t" style="color:var(--muted);">Bend knee to 90°</div><div class="st">Week 3 goal</div></div></div>
+              <div class="milestone"><div class="day faded">42</div><div class="divider"></div><div><div class="t" style="color:var(--muted);">Back to normal activity</div><div class="st">Final milestone</div></div></div>
+            </div>
+            <div class="bottom-nav">
+              <button class="nav-item" data-go="today"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Today</button>
+              <button class="nav-item" data-go="patient"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Patient</button>
+              <button class="nav-item active" data-go="timeline"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12c4 0 5-8 9-8s5 8 9 8M3 12c4 0 5 8 9 8s5-8 9-8"/></svg>Progress</button>
+              <button class="nav-item" data-go="notes"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5h16v11H7l-3 3z"/></svg>Notes</button>
+            </div>
+          </div>
+
+          <!-- NOTES -->
+          <div class="screen" data-screen="notes">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content s-notes">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin:8px 0 6px;">
+                <div class="h" style="margin:0;">Notes</div>
+                <button class="icon-btn" data-toast="Listening… ask about meds or appointments" aria-label="Voice note">🎙️</button>
+              </div>
+              <div class="sub">Things to bring up at the next follow-up</div>
+              <div class="note-card coral">
+                <div class="date">Apr 22 · Tue</div>
+                <div class="body">Mom seemed confused about which pills were which this morning. We re-organized them in the weekly tray.</div>
+                <div class="nfoot"><span>Add to follow-up ★</span><span>··</span></div>
+              </div>
+              <div class="note-card">
+                <div class="date">Apr 20 · Sun</div>
+                <div class="body">Swelling looked a little worse around the incision. She says pain is about the same (4/10).</div>
+                <div class="nfoot"><span>With ☼ photo</span><span>··</span></div>
+              </div>
+              <div class="note-card amber">
+                <div class="date">Apr 18 · Fri</div>
+                <div class="body">Better sleep last night! Slept from 10pm to 6am with only one bathroom trip.</div>
+                <div class="nfoot"><span>Good news ✦</span><span>··</span></div>
+              </div>
+            </div>
+            <div class="bottom-nav">
+              <button class="nav-item" data-go="today"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Today</button>
+              <button class="nav-item" data-go="patient"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Patient</button>
+              <button class="nav-item" data-go="timeline"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12c4 0 5-8 9-8s5 8 9 8M3 12c4 0 5 8 9 8s5-8 9-8"/></svg>Progress</button>
+              <button class="nav-item active" data-go="notes"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5h16v11H7l-3 3z"/></svg>Notes</button>
+            </div>
+          </div>
+
+          <!-- EMERGENCY -->
+          <div class="screen s-emerg" data-screen="emergency">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content">
+              <div class="ehead">
+                <button class="icon-btn e-back" data-go="patient" aria-label="Back">←</button>
+                <span class="tag">🆘 Emergency card</span>
+                <button class="icon-btn e-back" data-toast="Card ready to share" aria-label="Share">⇪</button>
+              </div>
+              <div class="e-big">Mom (Linda)</div>
+              <div class="e-sub">68 · Day 12 of knee replacement recovery</div>
+              <div class="e-section"><div class="lbl">Surgery date</div><div class="val">March 12, 2026 · Dr. Priya Patel</div></div>
+              <div class="e-section"><div class="lbl">Allergies</div><div class="val">Penicillin · Shellfish</div></div>
+              <div class="e-section meds">
+                <div class="lbl">Active medications</div>
+                <ul>
+                  <li><span>Oxycodone</span><span class="dose">5mg · q6h</span></li>
+                  <li><span>Tylenol</span><span class="dose">500mg · q8h</span></li>
+                  <li><span>Aspirin</span><span class="dose">81mg · daily</span></li>
+                  <li><span>Colace</span><span class="dose">100mg · bid</span></li>
+                </ul>
+              </div>
+              <div class="e-section"><div class="lbl">Hospital</div><div class="val">Grand River Hospital · (519) 749-4300</div></div>
+              <button class="share-btn" data-toast="Sharing with paramedic…">Share with paramedic →</button>
+            </div>
+          </div>
+
+          <!-- SETTINGS -->
+          <div class="screen" data-screen="settings">
+            <div class="statusbar"><span>9:41</span><span class="icons">●●● ⌃ ▮</span></div>
+            <div class="content s-settings">
+              <div style="display:flex;align-items:center;gap:10px;margin-top:4px;">
+                <button class="icon-btn" data-go="today" aria-label="Back">←</button>
+                <div class="h" style="margin:0;">Settings</div>
+              </div>
+              <div class="profile-card" style="margin-top:14px;">
+                <div class="avatar" style="width:48px;height:48px;font-size:18px;">S</div>
+                <div>
+                  <div class="name">Sarah Chen</div>
+                  <div class="prole">Primary caregiver · 1 patient</div>
+                </div>
+              </div>
+              <div class="settings-section">
+                <div class="settings-row" data-toast="Invite link copied"><div class="ic coral">👥</div><span>Invite co-caregiver</span><span class="arrow">›</span></div>
+                <div class="settings-row" data-toast="Notifications on"><div class="ic">🔔</div><span>Notifications</span><span class="arrow">›</span></div>
+                <div class="settings-row"><div class="ic">📱</div><span>SMS reminders</span><div class="toggle"></div></div>
+              </div>
+              <div class="settings-section">
+                <div class="settings-row" data-toast="Escalation: contact surgeon after 90 min"><div class="ic">⎋</div><span>Escalation settings</span><span class="arrow">›</span></div>
+                <div class="settings-row" data-toast="Connected to Dr. Patel's clinic"><div class="ic">🩺</div><span>Connect surgeon</span><span class="arrow">›</span></div>
+                <div class="settings-row"><div class="ic">🌙</div><span>Dark mode</span><div class="toggle off"></div></div>
+              </div>
+            </div>
+            <div class="bottom-nav">
+              <button class="nav-item" data-go="today"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Today</button>
+              <button class="nav-item" data-go="patient"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Patient</button>
+              <button class="nav-item" data-go="timeline"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 12c4 0 5-8 9-8s5 8 9 8M3 12c4 0 5 8 9 8s5-8 9-8"/></svg>Progress</button>
+              <button class="nav-item" data-go="notes"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5h16v11H7l-3 3z"/></svg>Notes</button>
+            </div>
+          </div>
+
+          <div id="demo-toast"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES RECAP ============ -->
+<section class="alt-bg">
+  <div class="container">
+    <div class="head-block" style="text-align:center;">
+      <span class="eyebrow">What you just saw</span>
+      <h2 class="section-title center">Built around the moments that matter</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">💊</div><h3>Never miss a dose</h3><p>Timed reminders with guardrails on high-alert medications, and a clear overdue prompt when a check-in is needed.</p></div>
+      <div class="feature-card"><div class="feature-icon">📈</div><h3>See progress, feel hope</h3><p>The recovery ring and milestones turn an abstract plan into a finish line the whole family can see.</p></div>
+      <div class="feature-card"><div class="feature-icon">🆘</div><h3>Ready for the worst day</h3><p>The emergency card puts medications, allergies, and surgery details one tap from a paramedic's hands.</p></div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="contact.html" class="btn">Talk to the team <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">KinderCare</a>
+        <p class="footer-blurb">Caregiving support that helps families manage medications, appointments, and recovery — and lifts the weight off the people doing the caring.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="demo.html">Demo</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:kkburke@uwaterloo.ca">kkburke@uwaterloo.ca</a>
+        <a href="tel:+15198884567">(519) 888-4567</a>
+        <a href="contact.html#newsletter">Newsletter updates</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> KinderCare. A University of Waterloo Management Engineering capstone project.</p>
+      <p class="footer-disclaimer">This website is designed for a course project and is tracking data such as clicks and page visits in order to analyze user experience.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script src="assets/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us — KinderCare</title>
+<meta name="description" content="Reach the KinderCare team, or sign up to get updates as the app grows. Email kkburke@uwaterloo.ca or call (519) 888-4567." />
+
+<!-- ============ Google Analytics 4 ============ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">KinderCare</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+      <li><a href="#newsletter" class="nav-cta">Get updates</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+<div class="page-intro">
+  <div class="container">
+    <span class="eyebrow">Contact us</span>
+    <h1>We'd love to <em>hear from you</em></h1>
+    <p>Whether you're a caregiver, a clinician, or just curious — reach out, and a member of our team will get back to you.</p>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section>
+  <div class="container">
+    <div class="split">
+      <!-- Info + form -->
+      <div>
+        <h2 class="section-title">Send us a message</h2>
+        <p class="section-subtitle" style="margin-bottom:26px;">Tell us what you're looking for and we'll point you in the right direction.</p>
+
+        <form id="contact-form" class="form-card" novalidate>
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input id="c-name" name="name" type="text" autocomplete="name" placeholder="Jordan Lee" required />
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" placeholder="jordan@example.com" required />
+          </div>
+          <div class="field">
+            <label for="c-reason">What's this about?</label>
+            <select id="c-reason" name="reason">
+              <option value="caregiver_question">I'm a caregiver with a question</option>
+              <option value="clinic_partnership">I'm a clinic interested in partnering</option>
+              <option value="press_or_research">Press or research</option>
+              <option value="general">Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="width:100%; justify-content:center;">Send message</button>
+          <p class="form-note">We'll only use your details to reply. This is a course project demo — messages aren't stored on a server.</p>
+          <div class="form-success" id="contact-success" tabindex="-1">
+            <strong>Thank you — your message is on its way.</strong>
+            We'll be in touch at the email you provided.
+          </div>
+        </form>
+      </div>
+
+      <!-- Direct contact cards -->
+      <div>
+        <h2 class="section-title">Reach us directly</h2>
+        <p class="section-subtitle" style="margin-bottom:26px;">Prefer email or phone? Here's how to find us.</p>
+        <div class="contact-cards">
+          <a class="contact-card" href="mailto:kkburke@uwaterloo.ca">
+            <span class="ic">✉️</span>
+            <span>
+              <span class="lbl">Email</span><br>
+              <span class="val">kkburke@uwaterloo.ca</span>
+            </span>
+          </a>
+          <a class="contact-card" href="tel:+15198884567">
+            <span class="ic">📞</span>
+            <span>
+              <span class="lbl">Phone</span><br>
+              <span class="val">(519) 888-4567</span>
+            </span>
+          </a>
+          <div class="contact-card" style="cursor:default;">
+            <span class="ic">📍</span>
+            <span>
+              <span class="lbl">Where we are</span><br>
+              <span class="val">University of Waterloo</span>
+              <span style="display:block; font-size:13px; color:var(--muted); font-weight:400;">Management Science &amp; Engineering · Waterloo, ON</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section id="newsletter" class="alt-bg">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Stay in the loop</span>
+        <h2 class="section-title">Get updates before everyone else</h2>
+        <p class="section-subtitle">Building KinderCare is an ongoing journey. Sign up to hear about new features, pilots, and milestones — useful whether you're a caregiver waiting for launch or a clinic deciding when to roll it out to patients.</p>
+        <ul class="benefit-list" style="margin-top:24px;">
+          <li><span class="tick">✓</span><div><strong>Occasional, never spammy</strong><span class="desc">A short note when there's something genuinely new.</span></div></li>
+          <li><span class="tick">✓</span><div><strong>Early access</strong><span class="desc">Be first in line for pilots and beta features.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <form class="form-card newsletter-form" data-location="contact_page" novalidate>
+          <div class="field">
+            <label for="n-email">Email address</label>
+            <input id="n-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="n-role">I'm a…</label>
+            <select id="n-role" name="role">
+              <option value="caregiver">Family caregiver</option>
+              <option value="clinician">Clinician or clinic owner</option>
+              <option value="patient">Patient</option>
+              <option value="other">Other / just interested</option>
+            </select>
+          </div>
+          <button type="submit" class="btn coral" style="width:100%; justify-content:center;">Sign up for updates</button>
+          <p class="form-note">Unsubscribe anytime. Course-project demo — no real list is maintained.</p>
+          <div class="form-success newsletter-success">
+            <strong>You're on the list.</strong>
+            We'll send updates as KinderCare grows.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">KinderCare</a>
+        <p class="footer-blurb">Caregiving support that helps families manage medications, appointments, and recovery — and lifts the weight off the people doing the caring.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="demo.html">Demo</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:kkburke@uwaterloo.ca">kkburke@uwaterloo.ca</a>
+        <a href="tel:+15198884567">(519) 888-4567</a>
+        <a href="#newsletter">Newsletter updates</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> KinderCare. A University of Waterloo Management Engineering capstone project.</p>
+      <p class="footer-disclaimer">This website is designed for a course project and is tracking data such as clicks and page visits in order to analyze user experience.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
